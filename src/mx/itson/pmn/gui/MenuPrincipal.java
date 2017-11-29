@@ -32,7 +32,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         panelPrincipal = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        btnCalcular = new javax.swing.JButton();
+        btnNewton = new javax.swing.JButton();
         btnBiseccion = new javax.swing.JButton();
         btnReglaFalsa = new javax.swing.JButton();
         btnCalcular3 = new javax.swing.JButton();
@@ -60,16 +60,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Métodos Numericos");
 
-        btnCalcular.setBackground(new java.awt.Color(102, 102, 255));
-        btnCalcular.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCalcular.setText("Método de Newton");
-        btnCalcular.setBorder(null);
-        btnCalcular.setBorderPainted(false);
-        btnCalcular.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCalcular.setOpaque(false);
-        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+        btnNewton.setBackground(new java.awt.Color(102, 102, 255));
+        btnNewton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnNewton.setText("Método de Newton");
+        btnNewton.setBorder(null);
+        btnNewton.setBorderPainted(false);
+        btnNewton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNewton.setOpaque(false);
+        btnNewton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcularActionPerformed(evt);
+                btnNewtonActionPerformed(evt);
             }
         });
 
@@ -304,7 +304,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                                 .addGap(40, 40, 40)
                                 .addComponent(btnReglaFalsa, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
-                                .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(btnNewton, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
                         .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnCalcular15, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -323,7 +323,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(49, 49, 49)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNewton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBiseccion, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReglaFalsa, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -365,10 +365,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+    private void btnNewtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewtonActionPerformed
 
+        MetodoNewton mn = new MetodoNewton();
+        mn.setVisible(true);
+        this.setVisible(false);
         
-    }//GEN-LAST:event_btnCalcularActionPerformed
+    }//GEN-LAST:event_btnNewtonActionPerformed
 
     private void btnBiseccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBiseccionActionPerformed
 
@@ -387,7 +390,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReglaFalsaActionPerformed
 
     private void btnCalcular3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular3ActionPerformed
-        // TODO add your handling code here:
+        
+        MetodoSecante ms = new MetodoSecante();
+        ms.setVisible(true);
+        this.setVisible(false);
+        
     }//GEN-LAST:event_btnCalcular3ActionPerformed
 
     private void btnCalcular4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular4ActionPerformed
@@ -475,7 +482,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBiseccion;
-    private javax.swing.JButton btnCalcular;
     private javax.swing.JButton btnCalcular10;
     private javax.swing.JButton btnCalcular11;
     private javax.swing.JButton btnCalcular12;
@@ -489,6 +495,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnCalcular7;
     private javax.swing.JButton btnCalcular8;
     private javax.swing.JButton btnCalcular9;
+    private javax.swing.JButton btnNewton;
     private javax.swing.JButton btnReglaFalsa;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel panelPrincipal;

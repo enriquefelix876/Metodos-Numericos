@@ -81,7 +81,7 @@
                                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                   <Component id="btnReglaFalsa" min="-2" pref="200" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                  <Component id="btnCalcular" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="btnNewton" min="-2" pref="200" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -109,7 +109,7 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnCalcular" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                      <Component id="btnNewton" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                       <Component id="btnBiseccion" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                       <Component id="btnReglaFalsa" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                   </Group>
@@ -159,7 +159,7 @@
             <Property name="text" type="java.lang.String" value="M&#xe9;todos Numericos"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnCalcular">
+        <Component class="javax.swing.JButton" name="btnNewton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -178,7 +178,7 @@
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalcularActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNewtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnBiseccion">
