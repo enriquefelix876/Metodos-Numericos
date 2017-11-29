@@ -34,7 +34,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnCalcular = new javax.swing.JButton();
         btnBiseccion = new javax.swing.JButton();
-        btnCalcular2 = new javax.swing.JButton();
+        btnReglaFalsa = new javax.swing.JButton();
         btnCalcular3 = new javax.swing.JButton();
         btnCalcular4 = new javax.swing.JButton();
         btnCalcular5 = new javax.swing.JButton();
@@ -86,16 +86,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnCalcular2.setBackground(new java.awt.Color(102, 102, 255));
-        btnCalcular2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCalcular2.setText("Método de la Regla Falsa");
-        btnCalcular2.setBorder(null);
-        btnCalcular2.setBorderPainted(false);
-        btnCalcular2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCalcular2.setOpaque(false);
-        btnCalcular2.addActionListener(new java.awt.event.ActionListener() {
+        btnReglaFalsa.setBackground(new java.awt.Color(102, 102, 255));
+        btnReglaFalsa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnReglaFalsa.setText("Método de la Regla Falsa");
+        btnReglaFalsa.setBorder(null);
+        btnReglaFalsa.setBorderPainted(false);
+        btnReglaFalsa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnReglaFalsa.setOpaque(false);
+        btnReglaFalsa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcular2ActionPerformed(evt);
+                btnReglaFalsaActionPerformed(evt);
             }
         });
 
@@ -302,7 +302,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                             .addGroup(panelPrincipalLayout.createSequentialGroup()
                                 .addComponent(btnBiseccion, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
-                                .addComponent(btnCalcular2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnReglaFalsa, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
                                 .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
@@ -325,7 +325,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBiseccion, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCalcular2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnReglaFalsa, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalcular5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -378,9 +378,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnBiseccionActionPerformed
 
-    private void btnCalcular2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCalcular2ActionPerformed
+    private void btnReglaFalsaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReglaFalsaActionPerformed
+        
+        MetodoReglaFalsa mrf = new MetodoReglaFalsa();
+        mrf.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnReglaFalsaActionPerformed
 
     private void btnCalcular3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular3ActionPerformed
         // TODO add your handling code here:
@@ -478,7 +482,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnCalcular13;
     private javax.swing.JButton btnCalcular14;
     private javax.swing.JButton btnCalcular15;
-    private javax.swing.JButton btnCalcular2;
     private javax.swing.JButton btnCalcular3;
     private javax.swing.JButton btnCalcular4;
     private javax.swing.JButton btnCalcular5;
@@ -486,6 +489,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnCalcular7;
     private javax.swing.JButton btnCalcular8;
     private javax.swing.JButton btnCalcular9;
+    private javax.swing.JButton btnReglaFalsa;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel panelPrincipal;
     // End of variables declaration//GEN-END:variables
