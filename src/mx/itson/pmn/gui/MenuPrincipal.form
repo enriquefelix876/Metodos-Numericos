@@ -62,7 +62,7 @@
                       </Group>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="btnCalcular6" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="btnGaussSeidel" min="-2" pref="200" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                               <Component id="btnCalcular7" min="-2" pref="200" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
@@ -70,11 +70,11 @@
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="btnCalcular3" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="btnSecante" min="-2" pref="200" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                  <Component id="btnCalcular4" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="btnGaussJordan" min="-2" pref="200" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                  <Component id="btnCalcular5" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="btnMatrizInversa" min="-2" pref="200" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="btnBiseccion" min="-2" pref="200" max="-2" attributes="0"/>
@@ -87,7 +87,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="btnCalcular15" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="btnSimpson38" min="-2" pref="200" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Component id="btnCalcular12" min="-2" pref="200" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
@@ -115,14 +115,14 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnCalcular5" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
-                      <Component id="btnCalcular3" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
-                      <Component id="btnCalcular4" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                      <Component id="btnMatrizInversa" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                      <Component id="btnSecante" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                      <Component id="btnGaussJordan" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnCalcular8" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
-                      <Component id="btnCalcular6" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                      <Component id="btnGaussSeidel" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                       <Component id="btnCalcular7" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
@@ -138,7 +138,7 @@
                       <Component id="btnCalcular13" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btnCalcular15" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="btnSimpson38" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace pref="49" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -225,7 +225,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReglaFalsaActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnCalcular3">
+        <Component class="javax.swing.JButton" name="btnSecante">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -244,10 +244,10 @@
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalcular3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSecanteActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnCalcular4">
+        <Component class="javax.swing.JButton" name="btnGaussJordan">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -266,10 +266,10 @@
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalcular4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGaussJordanActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnCalcular5">
+        <Component class="javax.swing.JButton" name="btnMatrizInversa">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -288,10 +288,10 @@
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalcular5ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMatrizInversaActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnCalcular6">
+        <Component class="javax.swing.JButton" name="btnGaussSeidel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -310,7 +310,7 @@
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalcular6ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGaussSeidelActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCalcular7">
@@ -489,7 +489,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalcular14ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnCalcular15">
+        <Component class="javax.swing.JButton" name="btnSimpson38">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -508,7 +508,7 @@
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalcular15ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSimpson38ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

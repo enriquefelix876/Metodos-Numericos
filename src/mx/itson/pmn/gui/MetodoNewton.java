@@ -53,6 +53,7 @@ public class MetodoNewton extends javax.swing.JFrame {
         txtTolerancia = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Metodo Newton");
 
         jPanel1.setBackground(new java.awt.Color(102, 102, 255));
         jPanel1.setForeground(new java.awt.Color(102, 102, 255));

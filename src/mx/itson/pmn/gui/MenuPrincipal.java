@@ -35,10 +35,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnNewton = new javax.swing.JButton();
         btnBiseccion = new javax.swing.JButton();
         btnReglaFalsa = new javax.swing.JButton();
-        btnCalcular3 = new javax.swing.JButton();
-        btnCalcular4 = new javax.swing.JButton();
-        btnCalcular5 = new javax.swing.JButton();
-        btnCalcular6 = new javax.swing.JButton();
+        btnSecante = new javax.swing.JButton();
+        btnGaussJordan = new javax.swing.JButton();
+        btnMatrizInversa = new javax.swing.JButton();
+        btnGaussSeidel = new javax.swing.JButton();
         btnCalcular7 = new javax.swing.JButton();
         btnCalcular8 = new javax.swing.JButton();
         btnCalcular9 = new javax.swing.JButton();
@@ -47,7 +47,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnCalcular12 = new javax.swing.JButton();
         btnCalcular13 = new javax.swing.JButton();
         btnCalcular14 = new javax.swing.JButton();
-        btnCalcular15 = new javax.swing.JButton();
+        btnSimpson38 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Metodos Númericos");
@@ -99,55 +99,55 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnCalcular3.setBackground(new java.awt.Color(102, 102, 255));
-        btnCalcular3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCalcular3.setText("Método de la Secante");
-        btnCalcular3.setBorder(null);
-        btnCalcular3.setBorderPainted(false);
-        btnCalcular3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCalcular3.setOpaque(false);
-        btnCalcular3.addActionListener(new java.awt.event.ActionListener() {
+        btnSecante.setBackground(new java.awt.Color(102, 102, 255));
+        btnSecante.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnSecante.setText("Método de la Secante");
+        btnSecante.setBorder(null);
+        btnSecante.setBorderPainted(false);
+        btnSecante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSecante.setOpaque(false);
+        btnSecante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcular3ActionPerformed(evt);
+                btnSecanteActionPerformed(evt);
             }
         });
 
-        btnCalcular4.setBackground(new java.awt.Color(102, 102, 255));
-        btnCalcular4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCalcular4.setText("Método de Gauss Jordan");
-        btnCalcular4.setBorder(null);
-        btnCalcular4.setBorderPainted(false);
-        btnCalcular4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCalcular4.setOpaque(false);
-        btnCalcular4.addActionListener(new java.awt.event.ActionListener() {
+        btnGaussJordan.setBackground(new java.awt.Color(102, 102, 255));
+        btnGaussJordan.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnGaussJordan.setText("Método de Gauss Jordan");
+        btnGaussJordan.setBorder(null);
+        btnGaussJordan.setBorderPainted(false);
+        btnGaussJordan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGaussJordan.setOpaque(false);
+        btnGaussJordan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcular4ActionPerformed(evt);
+                btnGaussJordanActionPerformed(evt);
             }
         });
 
-        btnCalcular5.setBackground(new java.awt.Color(102, 102, 255));
-        btnCalcular5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCalcular5.setText("Método de Matriz Inversa");
-        btnCalcular5.setBorder(null);
-        btnCalcular5.setBorderPainted(false);
-        btnCalcular5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCalcular5.setOpaque(false);
-        btnCalcular5.addActionListener(new java.awt.event.ActionListener() {
+        btnMatrizInversa.setBackground(new java.awt.Color(102, 102, 255));
+        btnMatrizInversa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnMatrizInversa.setText("Método de Matriz Inversa");
+        btnMatrizInversa.setBorder(null);
+        btnMatrizInversa.setBorderPainted(false);
+        btnMatrizInversa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMatrizInversa.setOpaque(false);
+        btnMatrizInversa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcular5ActionPerformed(evt);
+                btnMatrizInversaActionPerformed(evt);
             }
         });
 
-        btnCalcular6.setBackground(new java.awt.Color(102, 102, 255));
-        btnCalcular6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCalcular6.setText("Método de Gauss Seidel");
-        btnCalcular6.setBorder(null);
-        btnCalcular6.setBorderPainted(false);
-        btnCalcular6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCalcular6.setOpaque(false);
-        btnCalcular6.addActionListener(new java.awt.event.ActionListener() {
+        btnGaussSeidel.setBackground(new java.awt.Color(102, 102, 255));
+        btnGaussSeidel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnGaussSeidel.setText("Método de Gauss Seidel");
+        btnGaussSeidel.setBorder(null);
+        btnGaussSeidel.setBorderPainted(false);
+        btnGaussSeidel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGaussSeidel.setOpaque(false);
+        btnGaussSeidel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcular6ActionPerformed(evt);
+                btnGaussSeidelActionPerformed(evt);
             }
         });
 
@@ -255,16 +255,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnCalcular15.setBackground(new java.awt.Color(102, 102, 255));
-        btnCalcular15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCalcular15.setText("Regla de 3/8 Simpson");
-        btnCalcular15.setBorder(null);
-        btnCalcular15.setBorderPainted(false);
-        btnCalcular15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCalcular15.setOpaque(false);
-        btnCalcular15.addActionListener(new java.awt.event.ActionListener() {
+        btnSimpson38.setBackground(new java.awt.Color(102, 102, 255));
+        btnSimpson38.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnSimpson38.setText("Regla de 3/8 Simpson");
+        btnSimpson38.setBorder(null);
+        btnSimpson38.setBorderPainted(false);
+        btnSimpson38.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSimpson38.setOpaque(false);
+        btnSimpson38.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcular15ActionPerformed(evt);
+                btnSimpson38ActionPerformed(evt);
             }
         });
 
@@ -287,18 +287,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         .addComponent(btnCalcular11, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(panelPrincipalLayout.createSequentialGroup()
-                            .addComponent(btnCalcular6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnGaussSeidel, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(40, 40, 40)
                             .addComponent(btnCalcular7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(40, 40, 40)
                             .addComponent(btnCalcular8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                                .addComponent(btnCalcular3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnSecante, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
-                                .addComponent(btnCalcular4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnGaussJordan, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
-                                .addComponent(btnCalcular5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btnMatrizInversa, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelPrincipalLayout.createSequentialGroup()
                                 .addComponent(btnBiseccion, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
@@ -307,7 +307,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                                 .addComponent(btnNewton, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
                         .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnCalcular15, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSimpson38, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelPrincipalLayout.createSequentialGroup()
                                 .addComponent(btnCalcular12, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
@@ -328,13 +328,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addComponent(btnReglaFalsa, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCalcular5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCalcular3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCalcular4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnMatrizInversa, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSecante, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnGaussJordan, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalcular8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCalcular6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnGaussSeidel, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCalcular7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -347,7 +347,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addComponent(btnCalcular12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCalcular13, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnCalcular15, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSimpson38, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(49, Short.MAX_VALUE))
         );
 
@@ -389,25 +389,37 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnReglaFalsaActionPerformed
 
-    private void btnCalcular3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular3ActionPerformed
+    private void btnSecanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSecanteActionPerformed
         
         MetodoSecante ms = new MetodoSecante();
         ms.setVisible(true);
         this.setVisible(false);
         
-    }//GEN-LAST:event_btnCalcular3ActionPerformed
+    }//GEN-LAST:event_btnSecanteActionPerformed
 
-    private void btnCalcular4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCalcular4ActionPerformed
+    private void btnGaussJordanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGaussJordanActionPerformed
+        
+        MetodoGaussJordan mgj = new MetodoGaussJordan();
+        mgj.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnGaussJordanActionPerformed
 
-    private void btnCalcular5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCalcular5ActionPerformed
+    private void btnMatrizInversaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMatrizInversaActionPerformed
+        
+        MetodoMatrizInversa mmi = new MetodoMatrizInversa();
+        mmi.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnMatrizInversaActionPerformed
 
-    private void btnCalcular6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCalcular6ActionPerformed
+    private void btnGaussSeidelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGaussSeidelActionPerformed
+        
+        MetodoGaussSeidel mgs = new MetodoGaussSeidel();
+        mgs.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnGaussSeidelActionPerformed
 
     private void btnCalcular7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular7ActionPerformed
         // TODO add your handling code here:
@@ -441,9 +453,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCalcular14ActionPerformed
 
-    private void btnCalcular15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCalcular15ActionPerformed
+    private void btnSimpson38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpson38ActionPerformed
+        
+        MetodoSimpson38 ms38 = new MetodoSimpson38();
+        ms38.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnSimpson38ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -487,16 +503,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnCalcular12;
     private javax.swing.JButton btnCalcular13;
     private javax.swing.JButton btnCalcular14;
-    private javax.swing.JButton btnCalcular15;
-    private javax.swing.JButton btnCalcular3;
-    private javax.swing.JButton btnCalcular4;
-    private javax.swing.JButton btnCalcular5;
-    private javax.swing.JButton btnCalcular6;
     private javax.swing.JButton btnCalcular7;
     private javax.swing.JButton btnCalcular8;
     private javax.swing.JButton btnCalcular9;
+    private javax.swing.JButton btnGaussJordan;
+    private javax.swing.JButton btnGaussSeidel;
+    private javax.swing.JButton btnMatrizInversa;
     private javax.swing.JButton btnNewton;
     private javax.swing.JButton btnReglaFalsa;
+    private javax.swing.JButton btnSecante;
+    private javax.swing.JButton btnSimpson38;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel panelPrincipal;
     // End of variables declaration//GEN-END:variables

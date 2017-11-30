@@ -62,6 +62,7 @@ public class MetodoSecante extends javax.swing.JFrame {
         txtB = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Metodo Secante");
 
         jPanel1.setBackground(new java.awt.Color(102, 102, 255));
 
