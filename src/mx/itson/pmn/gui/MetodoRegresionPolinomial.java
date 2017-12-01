@@ -288,7 +288,7 @@ public class MetodoRegresionPolinomial extends javax.swing.JFrame {
         }
     }
     
-        /**
+     /**
      * Se genera un arreglo con los valores obtenidos previamente de XY 
      * multiplicados
      */

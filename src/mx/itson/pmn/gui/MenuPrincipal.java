@@ -41,7 +41,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnGaussSeidel = new javax.swing.JButton();
         btnLRegresionLineal = new javax.swing.JButton();
         btnCalcular8 = new javax.swing.JButton();
-        btnCalcular9 = new javax.swing.JButton();
+        btnRegresionMultiple = new javax.swing.JButton();
         btnCalcular10 = new javax.swing.JButton();
         btnCalcular11 = new javax.swing.JButton();
         btnCalcular12 = new javax.swing.JButton();
@@ -177,16 +177,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnCalcular9.setBackground(new java.awt.Color(102, 102, 255));
-        btnCalcular9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCalcular9.setText("Método Regresión Multiple");
-        btnCalcular9.setBorder(null);
-        btnCalcular9.setBorderPainted(false);
-        btnCalcular9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCalcular9.setOpaque(false);
-        btnCalcular9.addActionListener(new java.awt.event.ActionListener() {
+        btnRegresionMultiple.setBackground(new java.awt.Color(102, 102, 255));
+        btnRegresionMultiple.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnRegresionMultiple.setText("Método Regresión Multiple");
+        btnRegresionMultiple.setBorder(null);
+        btnRegresionMultiple.setBorderPainted(false);
+        btnRegresionMultiple.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRegresionMultiple.setOpaque(false);
+        btnRegresionMultiple.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcular9ActionPerformed(evt);
+                btnRegresionMultipleActionPerformed(evt);
             }
         });
 
@@ -280,7 +280,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addComponent(btnCalcular9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnRegresionMultiple, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40)
                         .addComponent(btnCalcular10, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40)
@@ -339,7 +339,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalcular11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCalcular9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRegresionMultiple, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCalcular10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -437,9 +437,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnCalcular8ActionPerformed
 
-    private void btnCalcular9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCalcular9ActionPerformed
+    private void btnRegresionMultipleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresionMultipleActionPerformed
+        
+        MetodoRegresionMultiple mrm = new MetodoRegresionMultiple();
+        mrm.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnRegresionMultipleActionPerformed
 
     private void btnCalcular10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular10ActionPerformed
         // TODO add your handling code here:
@@ -512,13 +516,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnCalcular13;
     private javax.swing.JButton btnCalcular14;
     private javax.swing.JButton btnCalcular8;
-    private javax.swing.JButton btnCalcular9;
     private javax.swing.JButton btnGaussJordan;
     private javax.swing.JButton btnGaussSeidel;
     private javax.swing.JButton btnLRegresionLineal;
     private javax.swing.JButton btnMatrizInversa;
     private javax.swing.JButton btnNewton;
     private javax.swing.JButton btnReglaFalsa;
+    private javax.swing.JButton btnRegresionMultiple;
     private javax.swing.JButton btnSecante;
     private javax.swing.JButton btnSimpson38;
     private javax.swing.JLabel jLabel1;

@@ -54,7 +54,7 @@
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="btnCalcular9" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="btnRegresionMultiple" min="-2" pref="200" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="btnCalcular10" min="-2" pref="200" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
@@ -128,7 +128,7 @@
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnCalcular11" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
-                      <Component id="btnCalcular9" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                      <Component id="btnRegresionMultiple" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                       <Component id="btnCalcular10" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -357,7 +357,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalcular8ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnCalcular9">
+        <Component class="javax.swing.JButton" name="btnRegresionMultiple">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -376,7 +376,7 @@
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalcular9ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegresionMultipleActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCalcular10">
