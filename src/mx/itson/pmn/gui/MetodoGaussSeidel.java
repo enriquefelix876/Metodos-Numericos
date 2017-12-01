@@ -19,11 +19,15 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
      * Creates new form MetodoGaussSeidel
      */
     
+    //Se declaran los arreglos de los campos de texto y las varibles
     JTextField[][]campos = new JTextField[5][6];
     JLabel[]variables = new JLabel[6];
     
+    //Se declaran las longitudes
     int n;
     int m;
+    
+    //Se inicia la tolerancia de error en 0
     private double tolerancia = 1; 
     
     public MetodoGaussSeidel() {
@@ -32,6 +36,7 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
         
         this.setLocationRelativeTo(null);
         
+        //Se agregan valores a los campos de texto
         campos[0][0] = x00;
         campos[0][1] = x01;
         campos[0][2] = x02;
@@ -67,6 +72,7 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
         campos[4][4] = x44;
         campos[4][5] = x45;
 
+        //Se agregan valores a las variables
         variables[0] = x0;
         variables[1] = x1;
         variables[2] = x2;
@@ -74,6 +80,7 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
         variables[4] = x4;
         variables[5] = x5;
         
+        //Se inician las longitudes en 2      
         n=2;
         m=2;
         
@@ -93,7 +100,6 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
         panelGaussSeidel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         comboLongitud = new javax.swing.JComboBox<>();
-        btnAplicar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         x00 = new javax.swing.JTextField();
@@ -132,11 +138,15 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
         x3 = new javax.swing.JLabel();
         x4 = new javax.swing.JLabel();
         x5 = new javax.swing.JLabel();
-        btnResolver = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         txtTolerancia = new javax.swing.JTextField();
-        btnEstablecerTolerancia = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        btnCalcular = new javax.swing.JButton();
+        btnBiseccion1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtArea = new javax.swing.JTextArea();
+        btnEstablecer = new javax.swing.JButton();
+        btnAplicar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Metodo Gauss Seidel");
@@ -151,13 +161,6 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
         comboLongitud.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 comboLongitudPropertyChange(evt);
-            }
-        });
-
-        btnAplicar.setText("Aplicar");
-        btnAplicar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAplicarActionPerformed(evt);
             }
         });
 
@@ -347,13 +350,7 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
 
         x5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
-        btnResolver.setText("Resolver");
-        btnResolver.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnResolverActionPerformed(evt);
-            }
-        });
-
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Porcentaje de Tolerancia");
 
@@ -364,16 +361,65 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
             }
         });
 
-        btnEstablecerTolerancia.setText("Establecer");
-        btnEstablecerTolerancia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEstablecerToleranciaActionPerformed(evt);
-            }
-        });
-
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Nota: No ordena La matriz ");
+
+        btnCalcular.setBackground(new java.awt.Color(102, 102, 255));
+        btnCalcular.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnCalcular.setText("Calcular");
+        btnCalcular.setBorder(null);
+        btnCalcular.setBorderPainted(false);
+        btnCalcular.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCalcular.setOpaque(false);
+        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularActionPerformed(evt);
+            }
+        });
+
+        btnBiseccion1.setBackground(new java.awt.Color(102, 102, 255));
+        btnBiseccion1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnBiseccion1.setText("Menu Principal");
+        btnBiseccion1.setBorder(null);
+        btnBiseccion1.setBorderPainted(false);
+        btnBiseccion1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBiseccion1.setOpaque(false);
+        btnBiseccion1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBiseccion1ActionPerformed(evt);
+            }
+        });
+
+        txtArea.setColumns(20);
+        txtArea.setRows(5);
+        jScrollPane1.setViewportView(txtArea);
+
+        btnEstablecer.setBackground(new java.awt.Color(102, 102, 255));
+        btnEstablecer.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnEstablecer.setText("Establecer");
+        btnEstablecer.setBorder(null);
+        btnEstablecer.setBorderPainted(false);
+        btnEstablecer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEstablecer.setOpaque(false);
+        btnEstablecer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEstablecerActionPerformed(evt);
+            }
+        });
+
+        btnAplicar.setBackground(new java.awt.Color(102, 102, 255));
+        btnAplicar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnAplicar.setText("Aplicar");
+        btnAplicar.setBorder(null);
+        btnAplicar.setBorderPainted(false);
+        btnAplicar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAplicar.setOpaque(false);
+        btnAplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAplicarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelGaussSeidelLayout = new javax.swing.GroupLayout(panelGaussSeidel);
         panelGaussSeidel.setLayout(panelGaussSeidelLayout);
@@ -381,90 +427,103 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
             panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelGaussSeidelLayout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelGaussSeidelLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
+                        .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelGaussSeidelLayout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(x0, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(34, 34, 34)
+                                .addComponent(x1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(44, 44, 44)
+                                .addComponent(x2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(36, 36, 36)
+                                .addComponent(x3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43)
+                                .addComponent(x4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(35, 35, 35)
+                                .addComponent(x5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelGaussSeidelLayout.createSequentialGroup()
+                                .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addGroup(panelGaussSeidelLayout.createSequentialGroup()
+                                        .addComponent(txtTolerancia)
+                                        .addGap(21, 21, 21)
+                                        .addComponent(btnEstablecer, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(18, 18, 18)
-                        .addComponent(txtTolerancia)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnEstablecerTolerancia))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelGaussSeidelLayout.createSequentialGroup()
-                        .addComponent(btnResolver)
-                        .addGap(88, 88, 88)
-                        .addComponent(jLabel3))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelGaussSeidelLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(x0, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
-                        .addComponent(x1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addComponent(x2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)
-                        .addComponent(x3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
-                        .addComponent(x4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(x5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(299, 588, Short.MAX_VALUE))
+                        .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnBiseccion1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelGaussSeidelLayout.createSequentialGroup()
+                        .addGap(316, 316, 316)
+                        .addComponent(jLabel1)))
+                .addContainerGap(45, Short.MAX_VALUE))
             .addGroup(panelGaussSeidelLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panelGaussSeidelLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(comboLongitud, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAplicar))
-                    .addComponent(jLabel1))
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(comboLongitud, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnAplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         panelGaussSeidelLayout.setVerticalGroup(
             panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelGaussSeidelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(19, 19, 19)
                 .addComponent(jLabel1)
-                .addGap(25, 25, 25)
-                .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(btnAplicar)
-                    .addComponent(comboLongitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(11, 11, 11)
+                .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panelGaussSeidelLayout.createSequentialGroup()
+                        .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(comboLongitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(x0, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(x2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(x3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(x4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(x5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnResolver)
-                            .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnEstablecerTolerancia)
-                            .addComponent(jLabel4)
-                            .addComponent(txtTolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(x1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(41, Short.MAX_VALUE))
+                            .addGroup(panelGaussSeidelLayout.createSequentialGroup()
+                                .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(x0, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(x2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(x3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(x4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(x5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jScrollPane1)
+                                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(x1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(70, 70, 70))
+                    .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3)
+                        .addComponent(btnBiseccion1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(panelGaussSeidelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtTolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnEstablecer, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGap(0, 875, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panelGaussSeidel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(panelGaussSeidel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 450, Short.MAX_VALUE)
+            .addGap(0, 452, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(panelGaussSeidel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -472,6 +531,9 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Este metodo es el encargado de Asignar las variables en pantalla
+     */
     private void generarVariables(){
     
         switch (n){
@@ -515,6 +577,11 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
                 break;
         }
     }
+    
+    /**
+     * Este metodo es en encargado de general los campos necesarios para 
+     * ingresar los valores en la matriz según la longitud
+     */
     private void generarCampos(){
     
         for (int i = 0; i < 5; i++) {
@@ -538,16 +605,11 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_comboLongitudPropertyChange
-
-    private void btnAplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAplicarActionPerformed
-
-        n = Integer.parseInt(String.valueOf(comboLongitud.getSelectedItem()));
-
-        limpiarCampos();
-        generarCampos();
-        generarVariables();
-    }//GEN-LAST:event_btnAplicarActionPerformed
        
+    /**
+     * Este método es el encargado de limpiar los campos para realizar una 
+     * nueva operación
+     */
     private void limpiarCampos(){
     
         for (int i = 0; i < n; i++) {
@@ -559,6 +621,10 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
         }
     }
     
+    /**
+     * Este metodo crea una matriz double con los los valores ingresados en los 
+     * campos de texto
+     */
     private void generarMatriz(){
         
         sistema = new double[n][n+1];
@@ -579,7 +645,9 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
         }
         
     }
+    
     double [][]sistema = new double[n][n+1];
+
     private void x31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_x31ActionPerformed
 
     }//GEN-LAST:event_x31ActionPerformed
@@ -595,8 +663,27 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
     double tolerancia3 = 100;
     double tolerancia4 = 100;
     double tolerancia5 = 100;
-    private void btnResolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResolverActionPerformed
+    
+    /**
+     * Metodo encargado de establecer la tolerancia de error
+     * @param evt 
+     */
+    private void txtToleranciaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtToleranciaFocusGained
 
+        txtTolerancia.setText(null);
+    }//GEN-LAST:event_txtToleranciaFocusGained
+
+    String area = "";
+    
+    /**
+     * Este método es el encargado de realizar el metodo de Gauss Seidel según 
+     * los valores ingresados en los campos de texto
+     * @param evt del botón calcular
+     */
+    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+
+    try{
+        area = "";
         generarMatriz();
 
         //Obtiene los coeficientes de la diagonal
@@ -619,8 +706,16 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
                 valor[1] = valor[1]/coeficiente[1];
 
                 System.out.println("x = "+valor[0]);
+                area += "x = "+String.format("%.2f", valor[0])+"\n";
+                txtArea.setText(area);
+                
                 System.out.println("y = "+valor[1]);
+                area += "y = "+String.format("%.2f", valor[1])+"\n";
+                txtArea.setText(area);
+                
                 System.out.println("_________________________________________");
+                area += "_________________________________________"+"\n";
+                txtArea.setText(area);
 
                 //Creación de los x1 y x2 para aplicar la formula
                 i1[0] = i2[0];
@@ -649,10 +744,19 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
                 valor[2] = valor[2]/coeficiente[2];
 
                 System.out.println("x = "+valor[0]);
+                area += "x = "+String.format("%.2f", valor[0])+"\n";
+                txtArea.setText(area);
+                
                 System.out.println("y = "+valor[1]);
+                area += "y = "+String.format("%.2f", valor[1])+"\n";
+                txtArea.setText(area);
+                
                 System.out.println("z = "+valor[2]);
+                area += "z = "+String.format("%.2f", valor[2])+"\n";
+                txtArea.setText(area);
+                
                 System.out.println("_________________________________________");
-
+                area+="_________________________________________"+"\n";
                 i1[0] = i2[0];
                 i1[1] = i2[1];
                 i1[2] = i2[2];
@@ -685,10 +789,23 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
                 valor[3] = valor[3]/coeficiente[3];
 
                 System.out.println("w = "+valor[0]);
+                area += "w = "+String.format("%.2f", valor[0])+"\n";
+                txtArea.setText(area);
+                
                 System.out.println("x = "+valor[1]);
+                area += "x = "+String.format("%.2f", valor[1])+"\n";
+                txtArea.setText(area);
+                
                 System.out.println("y = "+valor[2]);
+                area += "y = "+String.format("%.2f", valor[2])+"\n";
+                txtArea.setText(area);
+                
                 System.out.println("z = "+valor[3]);
-                System.out.println("_________________________________________");
+                area += "z = "+String.format("%.2f", valor[3])+"\n";
+                txtArea.setText(area);
+                
+                System.out.println();
+                area+="_________________________________________"+"\n";
 
                 i1[0] = i2[0];
                 i1[1] = i2[1];
@@ -729,11 +846,28 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
                 valor[4] = valor[4]/coeficiente[4];
 
                 System.out.println("v = "+valor[0]);
+                area += "v = "+String.format("%.2f", valor[0])+"\n";
+                txtArea.setText(area);
+                
                 System.out.println("w = "+valor[1]);
+                area += "w = "+String.format("%.2f", valor[1])+"\n";
+                txtArea.setText(area);
+                
                 System.out.println("x = "+valor[2]);
+                area += "x = "+String.format("%.2f", valor[2])+"\n";
+                txtArea.setText(area);
+                
                 System.out.println("y = "+valor[3]);
+                area += "y = "+String.format("%.2f", valor[3])+"\n";
+                txtArea.setText(area);
+                
                 System.out.println("z = "+valor[4]);
+                area += "z = "+String.format("%.2f", valor[4])+"\n";
+                txtArea.setText(area);
+                
                 System.out.println("_________________________________________");
+                area+="_________________________________________"+"\n";
+                txtArea.setText(area);
 
                 i1[0] = i2[0];
                 i1[1] = i2[1];
@@ -757,16 +891,29 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
 
             break;
         }
-    }//GEN-LAST:event_btnResolverActionPerformed
+        }catch(Exception e){
+        
+            JOptionPane.showMessageDialog(null, "Asegurese de ingresar todos "
+                    + "los valores en los campos de forma correcta");
+            
+        }
+    }//GEN-LAST:event_btnCalcularActionPerformed
 
-    private void txtToleranciaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtToleranciaFocusGained
+    private void btnBiseccion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBiseccion1ActionPerformed
+       
+        MenuPrincipal mp = new MenuPrincipal();
+        mp.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnBiseccion1ActionPerformed
 
-        txtTolerancia.setText(null);
-    }//GEN-LAST:event_txtToleranciaFocusGained
-
-    private void btnEstablecerToleranciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstablecerToleranciaActionPerformed
-
-        try {
+    /**
+     * Este método es el encargado de establecer la tolerancia de error
+     * @param evt del botón establecer tolerancia
+     */
+    private void btnEstablecerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstablecerActionPerformed
+        
+    try {
 
             this.setTolerancia(Double.parseDouble(txtTolerancia.getText()));
 
@@ -777,54 +924,32 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
             txtTolerancia.requestFocus();
         }
 
-    }//GEN-LAST:event_btnEstablecerToleranciaActionPerformed
+    }//GEN-LAST:event_btnEstablecerActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MetodoGaussSeidel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MetodoGaussSeidel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MetodoGaussSeidel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MetodoGaussSeidel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void btnAplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAplicarActionPerformed
+        
+        
+        n = Integer.parseInt(String.valueOf(comboLongitud.getSelectedItem()));
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MetodoGaussSeidel().setVisible(true);
-            }
-        });
-    }
+        limpiarCampos();
+        generarCampos();
+        generarVariables();
+    }//GEN-LAST:event_btnAplicarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAplicar;
-    private javax.swing.JButton btnEstablecerTolerancia;
-    private javax.swing.JButton btnResolver;
+    private javax.swing.JButton btnBiseccion1;
+    private javax.swing.JButton btnCalcular;
+    private javax.swing.JButton btnEstablecer;
     private javax.swing.JComboBox<String> comboLongitud;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel panelGaussSeidel;
+    private javax.swing.JTextArea txtArea;
     private javax.swing.JTextField txtTolerancia;
     private javax.swing.JLabel x0;
     private javax.swing.JTextField x00;
