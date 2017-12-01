@@ -58,7 +58,7 @@
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="btnInterpolacionNewton" min="-2" pref="200" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                          <Component id="btnCalcular11" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="btnInterpolacion" min="-2" pref="200" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
@@ -127,7 +127,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnCalcular11" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                      <Component id="btnInterpolacion" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                       <Component id="btnRegresionMultiple" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                       <Component id="btnInterpolacionNewton" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                   </Group>
@@ -401,7 +401,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInterpolacionNewtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnCalcular11">
+        <Component class="javax.swing.JButton" name="btnInterpolacion">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -420,7 +420,7 @@
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalcular11ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInterpolacionActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCalcular12">

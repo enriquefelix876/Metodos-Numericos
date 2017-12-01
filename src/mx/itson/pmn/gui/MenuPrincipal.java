@@ -43,7 +43,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnCalcular8 = new javax.swing.JButton();
         btnRegresionMultiple = new javax.swing.JButton();
         btnInterpolacionNewton = new javax.swing.JButton();
-        btnCalcular11 = new javax.swing.JButton();
+        btnInterpolacion = new javax.swing.JButton();
         btnCalcular12 = new javax.swing.JButton();
         btnCalcular13 = new javax.swing.JButton();
         btnCalcular14 = new javax.swing.JButton();
@@ -203,16 +203,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnCalcular11.setBackground(new java.awt.Color(102, 102, 255));
-        btnCalcular11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCalcular11.setText("Método Interpolación Lagrange");
-        btnCalcular11.setBorder(null);
-        btnCalcular11.setBorderPainted(false);
-        btnCalcular11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCalcular11.setOpaque(false);
-        btnCalcular11.addActionListener(new java.awt.event.ActionListener() {
+        btnInterpolacion.setBackground(new java.awt.Color(102, 102, 255));
+        btnInterpolacion.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnInterpolacion.setText("Método Interpolación Lagrange");
+        btnInterpolacion.setBorder(null);
+        btnInterpolacion.setBorderPainted(false);
+        btnInterpolacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnInterpolacion.setOpaque(false);
+        btnInterpolacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcular11ActionPerformed(evt);
+                btnInterpolacionActionPerformed(evt);
             }
         });
 
@@ -284,7 +284,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         .addGap(40, 40, 40)
                         .addComponent(btnInterpolacionNewton, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40)
-                        .addComponent(btnCalcular11, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnInterpolacion, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(panelPrincipalLayout.createSequentialGroup()
                             .addComponent(btnGaussSeidel, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -338,7 +338,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addComponent(btnLRegresionLineal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCalcular11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnInterpolacion, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRegresionMultiple, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnInterpolacionNewton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -453,9 +453,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnInterpolacionNewtonActionPerformed
 
-    private void btnCalcular11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCalcular11ActionPerformed
+    private void btnInterpolacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInterpolacionActionPerformed
+        
+        MetodoInterpolacionLagrange mil = new MetodoInterpolacionLagrange();
+        mil.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnInterpolacionActionPerformed
 
     private void btnCalcular12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular12ActionPerformed
         // TODO add your handling code here:
@@ -514,13 +518,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBiseccion;
-    private javax.swing.JButton btnCalcular11;
     private javax.swing.JButton btnCalcular12;
     private javax.swing.JButton btnCalcular13;
     private javax.swing.JButton btnCalcular14;
     private javax.swing.JButton btnCalcular8;
     private javax.swing.JButton btnGaussJordan;
     private javax.swing.JButton btnGaussSeidel;
+    private javax.swing.JButton btnInterpolacion;
     private javax.swing.JButton btnInterpolacionNewton;
     private javax.swing.JButton btnLRegresionLineal;
     private javax.swing.JButton btnMatrizInversa;
