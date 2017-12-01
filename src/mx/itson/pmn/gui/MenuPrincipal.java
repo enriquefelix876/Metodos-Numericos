@@ -39,7 +39,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnGaussJordan = new javax.swing.JButton();
         btnMatrizInversa = new javax.swing.JButton();
         btnGaussSeidel = new javax.swing.JButton();
-        btnCalcular7 = new javax.swing.JButton();
+        btnLRegresionLineal = new javax.swing.JButton();
         btnCalcular8 = new javax.swing.JButton();
         btnCalcular9 = new javax.swing.JButton();
         btnCalcular10 = new javax.swing.JButton();
@@ -151,16 +151,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnCalcular7.setBackground(new java.awt.Color(102, 102, 255));
-        btnCalcular7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCalcular7.setText("Método Regresión Lineal");
-        btnCalcular7.setBorder(null);
-        btnCalcular7.setBorderPainted(false);
-        btnCalcular7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCalcular7.setOpaque(false);
-        btnCalcular7.addActionListener(new java.awt.event.ActionListener() {
+        btnLRegresionLineal.setBackground(new java.awt.Color(102, 102, 255));
+        btnLRegresionLineal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnLRegresionLineal.setText("Método Regresión Lineal");
+        btnLRegresionLineal.setBorder(null);
+        btnLRegresionLineal.setBorderPainted(false);
+        btnLRegresionLineal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLRegresionLineal.setOpaque(false);
+        btnLRegresionLineal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcular7ActionPerformed(evt);
+                btnLRegresionLinealActionPerformed(evt);
             }
         });
 
@@ -289,7 +289,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         .addGroup(panelPrincipalLayout.createSequentialGroup()
                             .addComponent(btnGaussSeidel, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(40, 40, 40)
-                            .addComponent(btnCalcular7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnLRegresionLineal, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(40, 40, 40)
                             .addComponent(btnCalcular8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -335,7 +335,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalcular8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnGaussSeidel, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCalcular7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnLRegresionLineal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalcular11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -421,9 +421,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnGaussSeidelActionPerformed
 
-    private void btnCalcular7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCalcular7ActionPerformed
+    private void btnLRegresionLinealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLRegresionLinealActionPerformed
+        
+        MetodoRegresionLineal mrl = new MetodoRegresionLineal();
+        mrl.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnLRegresionLinealActionPerformed
 
     private void btnCalcular8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular8ActionPerformed
         // TODO add your handling code here:
@@ -503,11 +507,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnCalcular12;
     private javax.swing.JButton btnCalcular13;
     private javax.swing.JButton btnCalcular14;
-    private javax.swing.JButton btnCalcular7;
     private javax.swing.JButton btnCalcular8;
     private javax.swing.JButton btnCalcular9;
     private javax.swing.JButton btnGaussJordan;
     private javax.swing.JButton btnGaussSeidel;
+    private javax.swing.JButton btnLRegresionLineal;
     private javax.swing.JButton btnMatrizInversa;
     private javax.swing.JButton btnNewton;
     private javax.swing.JButton btnReglaFalsa;
