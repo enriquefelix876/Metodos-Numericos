@@ -430,7 +430,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLRegresionLinealActionPerformed
 
     private void btnCalcular8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular8ActionPerformed
-        // TODO add your handling code here:
+        
+        MetodoRegresionPolinomial mrp = new MetodoRegresionPolinomial();
+        mrp.setVisible(true);
+        this.setVisible(false);
+        
     }//GEN-LAST:event_btnCalcular8ActionPerformed
 
     private void btnCalcular9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular9ActionPerformed

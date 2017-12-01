@@ -229,6 +229,7 @@ public class MetodoSecante extends javax.swing.JFrame {
       //Editar esta función para obtener su raíz
       return 5*x-2;
     } 
+    
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
 
        try{

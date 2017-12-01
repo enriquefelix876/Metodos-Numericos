@@ -330,7 +330,7 @@ public class MetodoBiseccion extends javax.swing.JFrame {
 
     /**
      * Este metodo es el encargado de calcular el valor de f en función de x
-     * @param x 
+     * @param x
      * @return un dato double de f en función de x
      */
     public static double f(double x) {
