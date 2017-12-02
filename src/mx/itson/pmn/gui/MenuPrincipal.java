@@ -44,7 +44,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnRegresionMultiple = new javax.swing.JButton();
         btnInterpolacionNewton = new javax.swing.JButton();
         btnInterpolacion = new javax.swing.JButton();
-        btnCalcular12 = new javax.swing.JButton();
+        btnReglaRectangulo = new javax.swing.JButton();
         btnCalcular13 = new javax.swing.JButton();
         btnCalcular14 = new javax.swing.JButton();
         btnSimpson38 = new javax.swing.JButton();
@@ -216,16 +216,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnCalcular12.setBackground(new java.awt.Color(102, 102, 255));
-        btnCalcular12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCalcular12.setText("Regla del Rectangulo");
-        btnCalcular12.setBorder(null);
-        btnCalcular12.setBorderPainted(false);
-        btnCalcular12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCalcular12.setOpaque(false);
-        btnCalcular12.addActionListener(new java.awt.event.ActionListener() {
+        btnReglaRectangulo.setBackground(new java.awt.Color(102, 102, 255));
+        btnReglaRectangulo.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnReglaRectangulo.setText("Regla del Rectangulo");
+        btnReglaRectangulo.setBorder(null);
+        btnReglaRectangulo.setBorderPainted(false);
+        btnReglaRectangulo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnReglaRectangulo.setOpaque(false);
+        btnReglaRectangulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcular12ActionPerformed(evt);
+                btnReglaRectanguloActionPerformed(evt);
             }
         });
 
@@ -309,7 +309,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnSimpson38, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                                .addComponent(btnCalcular12, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnReglaRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
                                 .addComponent(btnCalcular13, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(40, 40, 40)
@@ -344,7 +344,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalcular14, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCalcular12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReglaRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCalcular13, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnSimpson38, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -461,9 +461,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnInterpolacionActionPerformed
 
-    private void btnCalcular12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCalcular12ActionPerformed
+    private void btnReglaRectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReglaRectanguloActionPerformed
+        
+        ReglaDelRectangulo rdr = new ReglaDelRectangulo();
+        rdr.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnReglaRectanguloActionPerformed
 
     private void btnCalcular13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular13ActionPerformed
         // TODO add your handling code here:
@@ -518,7 +522,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBiseccion;
-    private javax.swing.JButton btnCalcular12;
     private javax.swing.JButton btnCalcular13;
     private javax.swing.JButton btnCalcular14;
     private javax.swing.JButton btnCalcular8;
@@ -530,6 +533,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnMatrizInversa;
     private javax.swing.JButton btnNewton;
     private javax.swing.JButton btnReglaFalsa;
+    private javax.swing.JButton btnReglaRectangulo;
     private javax.swing.JButton btnRegresionMultiple;
     private javax.swing.JButton btnSecante;
     private javax.swing.JButton btnSimpson38;
