@@ -18,24 +18,21 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author enriq_000
  */
-
-
-
-
-public class ReglaDelRectangulo extends javax.swing.JFrame {
-
-DefaultTableModel modelo = new DefaultTableModel();
-
+public class ReglaDelTrapecio extends javax.swing.JFrame {
 
     /**
-     * Creates new form RegaDelRectangulo
+     * Creates new form ReglaDelTrapecio
      */
-    public ReglaDelRectangulo() {
+    
+    DefaultTableModel modelo = new DefaultTableModel();
+    
+    public ReglaDelTrapecio() {
         initComponents();
         this.setLocationRelativeTo(null);
         modelo.addColumn("x");
         modelo.addColumn("f(x)");
         tblAlturas.setModel(modelo);
+        
     }
 
     /**
@@ -64,7 +61,7 @@ DefaultTableModel modelo = new DefaultTableModel();
         btnResolver1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Regla del Rectangulo");
+        setTitle("Regla del Trapecio");
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 255));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -77,7 +74,7 @@ DefaultTableModel modelo = new DefaultTableModel();
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Numero de rectangulos:");
+        jLabel2.setText("Numero de trapecios:");
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -100,7 +97,7 @@ DefaultTableModel modelo = new DefaultTableModel();
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Metodo del Rectangulo");
+        jLabel5.setText("Metodo del Trapecio");
 
         tblAlturas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -153,7 +150,7 @@ DefaultTableModel modelo = new DefaultTableModel();
                                     .addComponent(txtFuncion, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtB)))
                             .addComponent(btnResolver)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                            .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(txtArea, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnResolver1)))))
@@ -185,7 +182,7 @@ DefaultTableModel modelo = new DefaultTableModel();
                 .addGap(29, 29, 29)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtArea)
                     .addComponent(btnResolver1))
                 .addContainerGap(25, Short.MAX_VALUE))
@@ -221,48 +218,51 @@ DefaultTableModel modelo = new DefaultTableModel();
 
             return resultado;
     }
-        /**
-     * Metodo utilizado para la integracion numerica por el Metodo del Rectangulo.
-     * @param funcion La funcion dada para la resolucion del Metodo del rectangulo.
-     * @param nRectangulos El numero de rectangulos a obtener.
+       /**
+     * Metodo utilizado para la integracion numerica por el Metodo del Trapecio.
+     * @param funcion La funcion dada para la resolucion del Metodo del Trapecio.
+     * @param nTrapecios El numero de trapecios a obtener.
      * @param a El valor de a.
      * @param b El valor de b
-     * @throws com.singularsys.jep.JepException
      */
-    public void metodoDelRectangulo(String funcion, int nRectangulos, double a, double b) throws JepException{
+    public void metodoDelTrapecio(String funcion, int nTrapecios, double a, double b) throws JepException{
        
-        try{
         /**
          * Declaracion de las variables utilizadas para la resolucion del Metodo.
          */
         List<Double> alturas = new ArrayList<>();
-        double h = (b-a)/nRectangulos;
+        double h = (b-a)/nTrapecios;
         alturas.add(a);
         List<Double> falturas = new ArrayList<>();
-        double sumatoria=0;
+        double integral=0;
         List<List> listas = new ArrayList<>();
-         
         /**
          * Se obtiene el valor de todas las alturas.
          */
-        for (int i = 0; i < nRectangulos; i++) {         
+        for (int i = 0; i < nTrapecios; i++) {         
             alturas.add(alturas.get(i)+h);  
         }
         
         /**
          * Se obtiene el valor de cada altura puesta en la funcion.
          */
-        for (int i = 0; i <= nRectangulos; i++) {
+        for (int i = 0; i <= nTrapecios; i++) {
             falturas.add(evaluar(alturas.get(i),funcion));  
         }
        
         /**
          * Se utiliza la formula general para obtener la Integral.
          */
-        for (int i = 0; i < falturas.size(); i++) {
-            sumatoria+=falturas.get(i)*h;
-            txtArea.setText(String.valueOf(sumatoria));
+        for (int i = 1; i < falturas.size(); i++) {
+            integral+=falturas.get(i);
         }
+                integral=integral*2;
+                integral+=falturas.get(0);
+                integral= integral*(h/2);
+                txtArea.setText(String.valueOf(integral));
+        
+        listas.add(alturas);
+        listas.add(falturas);
         
         //Se borran los datos de la tabla para realizar multiples consultas
         int filas = modelo.getRowCount();
@@ -284,42 +284,70 @@ DefaultTableModel modelo = new DefaultTableModel();
             
             modelo.addRow(datos);
         }
-    }catch(Exception e){
-
-        JOptionPane.showMessageDialog(null, "Asegurese de ingresar todos "
-                    + "los campos con valores númericos");
-    }
     }
     
     /**
-     * Este evento es encargado de invocar el metodo del rectangulo
-     * @param evt del botón calcular
+     * Este evento es encargado de invocar el metodo del trapecio
+     * @param evt del voton calcular
      */
     private void btnResolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResolverActionPerformed
 
         try {
-            metodoDelRectangulo(txtFuncion.getText(),Integer.parseInt
-        (txtNumero.getText()), Double.parseDouble(txtA.getText()), 
-        Double.parseDouble(txtB.getText()));
+            metodoDelTrapecio(txtFuncion.getText(),Integer.parseInt
+                (txtNumero.getText()), Double.parseDouble(txtA.getText()),
+                Double.parseDouble(txtB.getText()));
 
         } catch (JepException ex) {
-            
+
             Logger.getLogger(ReglaDelRectangulo.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Asegurese de ingresar todos "
-                    + "los campos con valores númericos");
+                + "los campos con valores númericos");
         }
-        
-        
+
     }//GEN-LAST:event_btnResolverActionPerformed
 
     private void btnResolver1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResolver1ActionPerformed
-        
+
         MenuPrincipal mp = new MenuPrincipal();
         mp.setVisible(true);
         this.setVisible(false);
-        
-        
+
     }//GEN-LAST:event_btnResolver1ActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(ReglaDelTrapecio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(ReglaDelTrapecio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(ReglaDelTrapecio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(ReglaDelTrapecio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new ReglaDelTrapecio().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnResolver;

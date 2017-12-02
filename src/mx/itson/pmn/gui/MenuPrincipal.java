@@ -45,7 +45,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnInterpolacionNewton = new javax.swing.JButton();
         btnInterpolacion = new javax.swing.JButton();
         btnReglaRectangulo = new javax.swing.JButton();
-        btnCalcular13 = new javax.swing.JButton();
+        btnReglaTrapecio = new javax.swing.JButton();
         btnCalcular14 = new javax.swing.JButton();
         btnSimpson38 = new javax.swing.JButton();
 
@@ -229,16 +229,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnCalcular13.setBackground(new java.awt.Color(102, 102, 255));
-        btnCalcular13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCalcular13.setText("Regla del Trapecio");
-        btnCalcular13.setBorder(null);
-        btnCalcular13.setBorderPainted(false);
-        btnCalcular13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCalcular13.setOpaque(false);
-        btnCalcular13.addActionListener(new java.awt.event.ActionListener() {
+        btnReglaTrapecio.setBackground(new java.awt.Color(102, 102, 255));
+        btnReglaTrapecio.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnReglaTrapecio.setText("Regla del Trapecio");
+        btnReglaTrapecio.setBorder(null);
+        btnReglaTrapecio.setBorderPainted(false);
+        btnReglaTrapecio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnReglaTrapecio.setOpaque(false);
+        btnReglaTrapecio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcular13ActionPerformed(evt);
+                btnReglaTrapecioActionPerformed(evt);
             }
         });
 
@@ -311,7 +311,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                             .addGroup(panelPrincipalLayout.createSequentialGroup()
                                 .addComponent(btnReglaRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
-                                .addComponent(btnCalcular13, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btnReglaTrapecio, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(40, 40, 40)
                         .addComponent(btnCalcular14, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(42, Short.MAX_VALUE))
@@ -345,7 +345,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalcular14, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReglaRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCalcular13, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnReglaTrapecio, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnSimpson38, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(49, Short.MAX_VALUE))
@@ -469,9 +469,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnReglaRectanguloActionPerformed
 
-    private void btnCalcular13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCalcular13ActionPerformed
+    private void btnReglaTrapecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReglaTrapecioActionPerformed
+        
+        ReglaDelTrapecio rdt = new ReglaDelTrapecio();
+        rdt.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnReglaTrapecioActionPerformed
 
     private void btnCalcular14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular14ActionPerformed
         // TODO add your handling code here:
@@ -522,7 +526,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBiseccion;
-    private javax.swing.JButton btnCalcular13;
     private javax.swing.JButton btnCalcular14;
     private javax.swing.JButton btnCalcular8;
     private javax.swing.JButton btnGaussJordan;
@@ -534,6 +537,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnNewton;
     private javax.swing.JButton btnReglaFalsa;
     private javax.swing.JButton btnReglaRectangulo;
+    private javax.swing.JButton btnReglaTrapecio;
     private javax.swing.JButton btnRegresionMultiple;
     private javax.swing.JButton btnSecante;
     private javax.swing.JButton btnSimpson38;
