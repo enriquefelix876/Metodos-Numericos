@@ -705,15 +705,12 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
                 valor[1] = sistema[1][2]+(-sistema[1][0]*valor[0]);
                 valor[1] = valor[1]/coeficiente[1];
 
-                System.out.println("x = "+valor[0]);
                 area += "x = "+String.format("%.2f", valor[0])+"\n";
                 txtArea.setText(area);
-                
-                System.out.println("y = "+valor[1]);
+
                 area += "y = "+String.format("%.2f", valor[1])+"\n";
                 txtArea.setText(area);
-                
-                System.out.println("_________________________________________");
+
                 area += "_________________________________________"+"\n";
                 txtArea.setText(area);
 
@@ -743,19 +740,15 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
                 valor[2] = sistema[2][3]+(-sistema[2][0]*valor[0])+(-sistema[2][1]*valor[1]);
                 valor[2] = valor[2]/coeficiente[2];
 
-                System.out.println("x = "+valor[0]);
                 area += "x = "+String.format("%.2f", valor[0])+"\n";
                 txtArea.setText(area);
                 
-                System.out.println("y = "+valor[1]);
                 area += "y = "+String.format("%.2f", valor[1])+"\n";
                 txtArea.setText(area);
-                
-                System.out.println("z = "+valor[2]);
+
                 area += "z = "+String.format("%.2f", valor[2])+"\n";
                 txtArea.setText(area);
-                
-                System.out.println("_________________________________________");
+
                 area+="_________________________________________"+"\n";
                 i1[0] = i2[0];
                 i1[1] = i2[1];
@@ -788,23 +781,18 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
                 valor[3] = sistema[3][4]+(-sistema[3][0]*valor[0])+(-sistema[3][1]*valor[1])+(-sistema[3][2]*valor[2]);
                 valor[3] = valor[3]/coeficiente[3];
 
-                System.out.println("w = "+valor[0]);
                 area += "w = "+String.format("%.2f", valor[0])+"\n";
                 txtArea.setText(area);
-                
-                System.out.println("x = "+valor[1]);
+
                 area += "x = "+String.format("%.2f", valor[1])+"\n";
                 txtArea.setText(area);
-                
-                System.out.println("y = "+valor[2]);
+
                 area += "y = "+String.format("%.2f", valor[2])+"\n";
                 txtArea.setText(area);
-                
-                System.out.println("z = "+valor[3]);
+
                 area += "z = "+String.format("%.2f", valor[3])+"\n";
                 txtArea.setText(area);
-                
-                System.out.println();
+
                 area+="_________________________________________"+"\n";
 
                 i1[0] = i2[0];
@@ -845,27 +833,21 @@ public class MetodoGaussSeidel extends javax.swing.JFrame {
                 valor[4] = sistema[4][5]+(-sistema[4][0]*valor[0])+(-sistema[4][1]*valor[1])+(-sistema[4][2]*valor[2])+(-sistema[4][3]*valor[3]);
                 valor[4] = valor[4]/coeficiente[4];
 
-                System.out.println("v = "+valor[0]);
                 area += "v = "+String.format("%.2f", valor[0])+"\n";
                 txtArea.setText(area);
-                
-                System.out.println("w = "+valor[1]);
+
                 area += "w = "+String.format("%.2f", valor[1])+"\n";
                 txtArea.setText(area);
-                
-                System.out.println("x = "+valor[2]);
+
                 area += "x = "+String.format("%.2f", valor[2])+"\n";
                 txtArea.setText(area);
-                
-                System.out.println("y = "+valor[3]);
+
                 area += "y = "+String.format("%.2f", valor[3])+"\n";
                 txtArea.setText(area);
-                
-                System.out.println("z = "+valor[4]);
+
                 area += "z = "+String.format("%.2f", valor[4])+"\n";
                 txtArea.setText(area);
-                
-                System.out.println("_________________________________________");
+
                 area+="_________________________________________"+"\n";
                 txtArea.setText(area);
 

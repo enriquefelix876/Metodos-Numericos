@@ -48,6 +48,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnReglaTrapecio = new javax.swing.JButton();
         btnCalcular14 = new javax.swing.JButton();
         btnSimpson38 = new javax.swing.JButton();
+        tbnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Metodos Númericos");
@@ -268,6 +269,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
+        tbnSalir.setBackground(new java.awt.Color(102, 102, 255));
+        tbnSalir.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        tbnSalir.setText("SALIR");
+        tbnSalir.setBorder(null);
+        tbnSalir.setBorderPainted(false);
+        tbnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tbnSalir.setOpaque(false);
+        tbnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tbnSalirActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
@@ -308,10 +322,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
                         .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnSimpson38, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelPrincipalLayout.createSequentialGroup()
-                                .addComponent(btnReglaRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(40, 40, 40)
-                                .addComponent(btnReglaTrapecio, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnReglaRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(40, 40, 40)
+                        .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnReglaTrapecio, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tbnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(40, 40, 40)
                         .addComponent(btnCalcular14, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(42, Short.MAX_VALUE))
@@ -347,7 +362,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addComponent(btnReglaRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReglaTrapecio, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnSimpson38, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSimpson38, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tbnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
 
@@ -478,7 +495,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReglaTrapecioActionPerformed
 
     private void btnCalcular14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcular14ActionPerformed
-        // TODO add your handling code here:
+        
+        MetodoSimpson13 ms13 = new MetodoSimpson13();
+        ms13.setVisible(true);
+        this.setVisible(false);
+        
     }//GEN-LAST:event_btnCalcular14ActionPerformed
 
     private void btnSimpson38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpson38ActionPerformed
@@ -488,6 +509,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_btnSimpson38ActionPerformed
+
+    private void tbnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbnSalirActionPerformed
+        
+        System.exit(0);
+        
+    }//GEN-LAST:event_tbnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -543,5 +570,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnSimpson38;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel panelPrincipal;
+    private javax.swing.JButton tbnSalir;
     // End of variables declaration//GEN-END:variables
 }
